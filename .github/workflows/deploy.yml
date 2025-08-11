@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [ "release/latest" ]
+    branches: [ "release" ]
   workflow_dispatch:
   
 jobs:
