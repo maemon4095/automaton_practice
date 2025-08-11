@@ -1,0 +1,41 @@
+name: deploy
+
+on:
+  push:
+    branches: [ "release/latest" ]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release/latest
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+  
+      - name: build
+        run: deno task build
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./ui/dist
+
+  deploy: 
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    
+    runs-on: ubuntu-latest
+    
+    needs: build
+    
+    steps:
+      - name: Deploy artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
