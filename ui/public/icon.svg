@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+    width="128" height="128" preserveAspectRatio="xMidYMid meet" viewBox="-64 -64 128 128">
+
+    <circle cx="0" cy="0" r="60" />
+    <text x="0" y="8" font-size="100" fill="white" text-anchor="middle" dominant-baseline="middle">
+        A
+    </text>
+</svg>

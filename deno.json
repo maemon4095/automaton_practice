@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "build-rs": "wasm-pack build crates/automaton_trial",
+    "install": "cd ui && deno install --allow-scripts=npm:@tailwindcss/oxide@4.1.11",
+    "dev": {
+      "dependencies": ["build-rs", "install"],
+      "command": "cd ui && deno run dev"
+    },
+    "build": {
+      "dependencies": ["build-rs", "install"],
+      "command": "cd ui && deno run build"
+    },
+    "preview": {
+      "dependencies": ["build-rs", "install"],
+      "command": "cd ui && deno run preview"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "deno.enable": true,
+  "[typescriptreact]": {
+    "editor.detectIndentation": false
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+}

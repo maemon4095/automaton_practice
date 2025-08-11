@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: stretch;
+  height: stretch;
+}
+
+@layer base {
+  input {
+    @apply border px-1 rounded
+  }
+}
+
+@layer components {
+  .main-area {
+    @apply border-slate-200 border-4 rounded shadow-md py-1 px-2
+  }
+}
