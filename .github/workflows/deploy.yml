@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: release/latest
+          ref: release
       - name: Setup Deno
         uses: denoland/setup-deno@v2
         with:
