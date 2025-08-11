@@ -8,5 +8,6 @@ import wasmPlugin from "vite-plugin-wasm";
 const wasm: any = wasmPlugin;
 
 export default defineConfig({
+  base: "./",
   plugins: [wasm(), solid(), tailwindcss()],
 });
